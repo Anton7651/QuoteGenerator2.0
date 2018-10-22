@@ -8,12 +8,12 @@
  *
  * @author antde
  */
-public class BirthdayProgram extends javax.swing.JFrame {
+public class Program extends javax.swing.JFrame {
 
     /**
-     * Creates new form BirthdayProgram
+     * Creates new form Program
      */
-    public BirthdayProgram() {
+    public Program() {
         initComponents();
     }
 
@@ -27,23 +27,24 @@ public class BirthdayProgram extends javax.swing.JFrame {
     private void initComponents() {
 
         title = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        nameLbl = new javax.swing.JLabel();
+        dateLbl = new javax.swing.JLabel();
         nameInput = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         dateInput = new javax.swing.JTextField();
         button = new javax.swing.JButton();
         outputText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        title.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
+        title.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(0, 0, 255));
         title.setText("Happy Birthday");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel1.setText("Enter your name:");
+        nameLbl.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        nameLbl.setText("Enter your name:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Enter your birthday:");
+        dateLbl.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        dateLbl.setText("Enter your birthday:");
 
         button.setText("Enter");
         button.addActionListener(new java.awt.event.ActionListener() {
@@ -52,68 +53,66 @@ public class BirthdayProgram extends javax.swing.JFrame {
             }
         });
 
-        outputText.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        outputText.setText("Message: ");
+        outputText.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        outputText.setText("Message:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(button)
+                .addGap(205, 205, 205))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(outputText, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(116, 116, 116)
-                            .addComponent(title))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(41, 41, 41)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))
-                            .addGap(46, 46, 46)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(nameInput)
-                                .addComponent(dateInput, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(164, 164, 164)
-                            .addComponent(button))))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dateLbl)
+                            .addComponent(outputText)
+                            .addComponent(nameLbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nameInput, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(dateInput)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(title)))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(title)
-                .addGap(27, 27, 27)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(nameLbl)
                     .addComponent(nameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(dateLbl)
                     .addComponent(dateInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addComponent(button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addComponent(outputText)
-                .addGap(51, 51, 51))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
+                                      
         String name, date; 
         name = nameInput.getText();
-        date  = dateInput.getText();
+        date = dateInput.getText();
         
-        outputText.setText(name +  "'s birthday is on " + date);
-        
-        
-        
+        outputText.setText(name +  "'s birthday is on " + date);                  
     }//GEN-LAST:event_buttonActionPerformed
-
+           
     /**
      * @param args the command line arguments
      */
@@ -131,20 +130,20 @@ public class BirthdayProgram extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BirthdayProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BirthdayProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BirthdayProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BirthdayProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BirthdayProgram().setVisible(true);
+                new Program().setVisible(true);
             }
         });
     }
@@ -152,9 +151,9 @@ public class BirthdayProgram extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button;
     private javax.swing.JTextField dateInput;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel dateLbl;
     private javax.swing.JTextField nameInput;
+    private javax.swing.JLabel nameLbl;
     private javax.swing.JLabel outputText;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
